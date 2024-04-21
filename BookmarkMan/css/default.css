@@ -1,9 +1,9 @@
 :root {
-	--text-dark: #175a69;
-	--text-hover:rgb(10, 79, 92);
+	--text-dark: #206192;
+	--text-hover:rgb(4, 62, 73)
 	--user-font: DIN Web Pro, Helvetica, Arial, sans-serif;
 	--background-elements:white;
-	--text-red:red;
+	--text-red:#CA5512;
 	--text-lightgray:lightgray;
 	--white:white;
 	--text-dimgray:dimgray;
