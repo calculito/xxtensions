@@ -1,4 +1,2 @@
-# Bookmark-Manager-Plus
-Chrome Extension
+# BookmarkMan
 
-https://chrome.google.com/webstore/detail/bookmark-manager-plus/pfbeenngglcojppheoegjjjomfkejibg
