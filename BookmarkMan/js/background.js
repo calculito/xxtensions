@@ -50,18 +50,18 @@ function updateBadgeText(tabId, changeInfo, tab) {
 	
 	// how many pages are bookmarked with the current domain?
 	if(badgeType == "domain") {
-		
-		var reg = /:\/\/[^/]*/;
-		var url = reg.exec(tab.url)[0];
+		return
+		// var reg = /:\/\/[^/]*/;
+		// var url = reg.exec(tab.url)[0];
 	
-		var count = 0;
+		// var count = 0;
 		
-		for (var i = 0; i < results.length; i++) {
-			if(results[i].url == undefined) continue;
-			if(results[i].url.includes(url)) count++;
-		}
+		// for (var i = 0; i < results.length; i++) {
+		// 	if(results[i].url == undefined) continue;
+		// 	if(results[i].url.includes(url)) count++;
+		// }
 		
-		setBadgeText(count);
+		// setBadgeText(count);
 		
 	// how many pages are bookmarked entirely?
 	} else if(badgeType == "total") {

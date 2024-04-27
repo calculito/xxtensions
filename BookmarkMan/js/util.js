@@ -248,12 +248,13 @@ var TabManager = {
 };
 
 var StorageManager = {
-	get: function(keys, callback) {
+	get: function (keys, callback) {
 		if($.isFunction(keys)) {
 			callback = keys;
 			keys = undefined;
 		}
-		chrome.storage.sync.get(keys, function(items) {
+		console.log(keys)
+		chrome.storage.sync.get(keys, function (items) {
 			handleRuntimeError();
 			if($.isFunction(callback)) {
 				callback(items);
@@ -1699,10 +1700,10 @@ function hideView() {
 	
 	bmp.exploreHierarchy.left.id = null;
 	bmp.exploreHierarchy.left.hierarchy = null;
-	StorageManager.set({
-		exploreHierarchy: bmp.exploreHierarchy,
-		exploreHistory: bmp.exploreHistory,
-	});
+	// StorageManager.set({
+	// 	exploreHierarchy: bmp.exploreHierarchy,
+	// 	exploreHistory: bmp.exploreHistory,
+	// });
 }
 
 function showToolset(selector) {
@@ -2527,10 +2528,10 @@ function validateExploreData(parameter) {
 		right.id = hierarchyToId(right.hierarchy);
 	}
 	
-	StorageManager.set({
-		exploreHierarchy: bmp.exploreHierarchy,
-		exploreHistory: bmp.exploreHistory,
-	});
+	// StorageManager.set({
+	// 	exploreHierarchy: bmp.exploreHierarchy,
+	// 	exploreHistory: bmp.exploreHistory,
+	// });
 	
 	updateExploreMove('#left-frame');
 	updateExploreMove('#right-frame');

@@ -2,7 +2,7 @@
 'use strict';
 
 $(document).ready(function() {
-	
+	console.log("jQuery version:", $.fn.jquery)
 	restoreOptions();
 	
 	$('#save').on('click', function () {
@@ -40,18 +40,18 @@ function saveOptions() {
 		isRealTimeApplied = false;
 	}
 	
-	StorageManager.set({
-		// default vlaues
-		badge: badgeDisplayMode,
-		warning: warningCount,
-		apply: isRealTimeApplied,
-	}, function() {
-		alertify.success(str_alertify_success_saved, 2000);
-	});
+	// StorageManager.set({
+	// 	// default vlaues
+	// 	badge: badgeDisplayMode,
+	// 	warning: warningCount,
+	// 	apply: isRealTimeApplied,
+	// }, function() {
+	// 	alertify.success(str_alertify_success_saved, 2000);
+	// });
 }
 
 function restoreOptions() {
-	
+	return
 	StorageManager.get({
 		// default vlaues
 		badge: DEFAULT_BADGE_DISPLAY_MODE,

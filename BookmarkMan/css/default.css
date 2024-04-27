@@ -1,7 +1,7 @@
 :root {
 	--text-dark: #206192;
-	--text-hover:rgb(4, 62, 73)
-	--user-font: DIN Web Pro, Helvetica, Arial, sans-serif;
+	--text-hover:rgb(4, 62, 73);
+	--user-font: DIN Web Pro;
 	--background-elements:white;
 	--text-red:#CA5512;
 	--text-lightgray:lightgray;
@@ -10,7 +10,7 @@
 }
 
 body {
-	width: 390px;
+	width: 32rem;
 	height: 590px;
 	margin: 5px;
 	word-wrap: break-word;
@@ -187,7 +187,6 @@ hr {
 #explore-sibling,
 #explore-history {
 	cursor: default;
-	border: solid 1px var(--text-lightgray);
 	position: fixed;
 	background-color: var(--white);
 	margin: 0 5px 0 0;
@@ -523,10 +522,9 @@ a>span {
 	height: 590px;
 }
 #right-frame {
-	/* left: 260px; */
-	height: 590px;
-	right: 5px;
-	width: 390px;
+    height: 40rem;
+    right: 5px;
+    width: 30rem;
 }
 
 #separator {
@@ -559,10 +557,11 @@ a>span {
 }
 #header-panel {
 	position: relative;
-	height: 22px;
-	border-bottom: 1px solid var(--text-lightgray);
+	height: 2rem;
 	padding: 2px 2px 0px 2px;
 	white-space: nowrap;
+	font-size: 1.2rem;
+	line-height: 1.6rem;
 }
 
 #view-type {
@@ -621,9 +620,9 @@ a>span {
 #search-set #search-editor {
 	border: 0;
 	color: var(--text-dark);
-	font-size: 12px;
+	font-size:1rem;
 	outline: 0;
-	padding: 0 2px;
+	padding: 0.2rem;
 	transition: background-color 0.4s
 		linear;
 	transition: width 0.25s cubic-bezier(0.21, 0.4, 0.53, 0.78), background-color 0.25s linear, border 0.4s linear;
@@ -647,14 +646,8 @@ a>span {
 .option-icon {
 	padding: 2px;
 	text-align: center;
-	vertical-align: bottom;
-	border: 1px solid var(--text-lightgray);
-	background-color: var(--background-elements);
-	border-radius: 5px;
-	box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.1), inset 1px 1px 4px 0px rgba(255, 255, 255, 0.6);
 	color: var(--text-dark) !important;
-	transition: border-color 0.15s ease-in-out,
-		background-color 0.15s ease-in-out;
+	transition: border-color 0.15s ease-in-out, background-color 0.15s ease-in-out;
 }
 
 .option-icon {
