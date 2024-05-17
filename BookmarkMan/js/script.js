@@ -16,6 +16,8 @@ function initView(targetFrame, isSearch) {
 	}
 	
 	$(targetFrame).find('#result-panel').scrollTop(0);
+	$('#search-editor').css({ 'background-color': 'orange',"color":"white"});
+	$('#search-editor').focus()
 }
 
 function getHierarchy(item) {
