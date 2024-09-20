@@ -1,36 +1,40 @@
 {
-	"manifest_version": 2,
+	"manifest_version": 3,
 	"name": "BookmarkMan",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Manage your bookmarks",
-	
 	"options_ui": {
 		"page": "options.html",
-		"chrome_style": true
+		"open_in_tab": true
 	},
-	
 	"icons": {
 		"16": "icon/logo.png",
 		"48": "icon/logo.png",
 		"64": "icon/logo.png"
 	},
-	
-	"content_security_policy": "script-src 'self' https://code.jquery.com https://ajax.googleapis.com; object-src 'self'",
-	
-	"browser_action": {
+	"content_security_policy": {
+		"extension_pages": "script-src 'self'; object-src 'self'"
+	},
+	"action": {
 		"default_icon": "icon/logo.png",
 		"default_popup": "popup.html"
 	},
-
 	"background": {
-		"page": "background.html",
-		"persistent": false
+		"service_worker": "js/background.js",
+		"type": "module"
 	},
-
 	"permissions": [
 		"bookmarks",
 		"tabs",
-		"storage",
-		"chrome://favicon/*"
+		"storage"
+	],
+	"web_accessible_resources": [
+		{
+			"resources": [
+				"lib/jquery/jquery_3.6.0.min.js",
+				"lib/jquery/jquery-ui.min.css"
+			],
+			"matches": ["<all_urls>"]
+		}
 	]
 }
